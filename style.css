@@ -1,0 +1,264 @@
+/* Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+ul[class],
+ol[class] {
+    padding: 0;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+ul[class],
+ol[class] {
+    list-style: none;
+}
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+button {
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+}
+
+/* Default */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+h2 {
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    z-index: 666;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 25px 28px;
+    background-color: #E0E1E2;
+}
+
+/* Logo */
+.header__logo {
+    position: relative;
+    z-index: 666;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.header__logo img {
+    max-width: 130px;
+}
+.logo__white {
+    display: none;
+}
+.header__logo.active .logo__white {
+    display: block;
+}
+.header__logo.active .logo__dark {
+    display: none;
+}
+
+/* Main menu */
+.menu__button {
+    position: absolute;
+    top: 25px;
+    right: 28px;
+    z-index: 666;
+    display: block;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-width: 0;
+}
+.menu__button span {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: #2F3132;
+    transition: .25s;
+}
+.menu__button span:before,
+.menu__button span:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin-top: -8px;
+    background-color: #2F3132;
+    transition: .25s;
+}
+.menu__button span:after {
+    margin-top: 8px;
+}
+.menu__button.active span {
+    background-color: #fff;
+    transform: rotate(45deg);
+}
+.menu__button.active span:before {
+    margin-top: 0;
+    transform: rotate(-90deg);
+    background-color: #fff;
+}
+.menu__button.active span:after {
+    display: none;
+}
+.menu__list {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 555;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #2F3132;
+    transform: translateX(-100%);
+}
+.menu__list.active {
+    transition: .25s;
+    transform: translateX(0);
+}
+.menu__list li {
+    max-width: 320px;
+    margin-bottom: 32px;
+}
+.menu__list a {
+    position: relative;
+    display: block;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 23px;
+    color: #C4C4C4;
+    text-transform: uppercase;
+    transition: .25s;
+}
+.menu__list a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform: scale(0);
+    transform-origin: left center;
+    transition: .25s;
+}
+.menu__list a:hover {
+    color: #fff;
+}
+.menu__list a:hover:after {
+    transform: scale(1);
+}
+
+/* Hero */
+.hero {
+    position: relative;
+    background-color: #E0E1E2;
+}
+.hero__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 160px;
+    padding-bottom: 110px;
+    text-align: center;
+}
+.hero__wrapper picture {
+    margin-top: -23px;
+    margin-bottom: 67px;
+}
+.hero__wrapper p {
+    max-width: 260px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #2F3132;
+}
+.hero__arrow {
+    position: absolute;
+    bottom: 48px;
+    padding: 0;
+    background-color: transparent;
+    border-width: 0;
+}
+
+/* Bluetooth */
+.bluetooth {
+    padding-top: 47px;
+    padding-bottom: 18px;
+    background-color: #EDEDED;
+}
+.bluetooth__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bluetooth h2 {
+    margin-bottom: 20px;
+}
+.bluetooth__icon {
+    margin-bottom: 27px;
+}
+.bluetooth p {
+    max-width: 306px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #2F3132;
+}
+.bluetooth .image__title {
+    margin-bottom: 0;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 70px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #C4C4C4;
+}
